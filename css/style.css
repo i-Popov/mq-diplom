@@ -448,12 +448,16 @@ body {
 
 /*PAGE->MAIN*/
 .main {
+    max-width: 360px;
     width: 100%;
+    margin: 0 auto 22px;
 }
 
 @media (min-width: 768px) {
     .main {
+        max-width: none;
         width: 56%;
+        margin: 0 auto;
     }
 }
 
@@ -659,8 +663,7 @@ body {
 }
 
 .aside-section {
-    margin-bottom: 58px;
-    margin-top: 64px;
+    margin: 42px auto;
 }
 
 .aside-section:last-child {
@@ -674,6 +677,7 @@ body {
 
     .aside-section {
         margin-top: 0;
+        margin-bottom: 58px;
     }
 }
 
@@ -722,6 +726,12 @@ body {
     display: flex;
     justify-content: flex-start;
     margin-bottom: 19px;
+}
+
+@media (max-width: 767px) {
+    .new-posts:last-child {
+        margin-bottom: 60px;
+    }
 }
 
 @media (min-width: 768px) {
@@ -857,6 +867,12 @@ body {
     flex-wrap: wrap;
 }
 
+@media (max-width: 767px) {
+    .tags-list {
+        margin-bottom: -5px;
+    }
+}
+
 .tags-list-item {
     margin: 5px 3px;
 }
@@ -957,9 +973,9 @@ body {
 }
 /*SHOP*/
 .shop-section {
-    max-width: 768px;
+    max-width: 360px;
     width: 100%;
-    padding: 0 35px;
+    padding: 0 15px;
     margin: 0 auto;
 }
 
@@ -987,6 +1003,7 @@ body {
     /*width: calc(95%/3);*/
     max-width: 337px;
     width: 100%;
+    margin-bottom: 22px;
 }
 
 @media (min-width: 768px) {
@@ -1003,16 +1020,58 @@ body {
     }
 }
 
-.product-preview {
-    text-align: center;
-    height: 230px;
-    overflow: hidden;
-    width: 290px;
-    margin: 0 auto -35px;
+.product:first-child .product-preview {
+    background-image: url("../images/shop-item-mobile1.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
-.product-img {
-    height: 226px;
+.product:nth-child(2) .product-preview {
+    background-image: url("../images/shop-item-mobile2.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.product:nth-child(3) .product-preview {
+    background-image: url("../images/shop-item-mobile3.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+@media (min-width: 768px) {
+    .product:first-child .product-preview {
+        background-image: url("../images/shop-item-tablet1.jpg");
+    }
+
+    .product:nth-child(2) .product-preview {
+        background-image: url("../images/shop-item-tablet2.jpg");
+    }
+
+    .product:nth-child(3) .product-preview {
+        background-image: url("../images/shop-item-tablet3.jpg");
+    }
+}
+
+@media (min-width: 1660px) {
+    .product:nth-child(1) .product-preview {
+        background-image: url("../images/shop-item-desk1.jpg");
+    }
+
+    .product:nth-child(2) .product-preview {
+        background-image: url("../images/shop-item-desk2.jpg");
+    }
+
+    .product:nth-child(3) .product-preview {
+        background-image: url("../images/shop-item-desk3.jpg");
+    }
+}
+
+.product-preview {
+    text-align: center;
+    height: 292px;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto -35px;
 }
 
 @media (min-width: 768px) {
@@ -1021,10 +1080,6 @@ body {
         overflow: hidden;
         width: 290px;
         margin: 0 auto -35px;
-    }
-
-    .product-img {
-        height: 226px;
     }
 }
 
@@ -1035,22 +1090,18 @@ body {
         width: auto;
         margin: 0 auto -35px;
     }
-
-    .product-img {
-        height: auto;
-    }
 }
 
 .product-info {
     border: 3px solid #b59f5b;
     padding: 44px 20px 25px;
     position: relative;
-    height: 267px;
 }
 
 @media (min-width: 768px) {
     .product-info {
         padding: 44px 20px 25px;
+        height: 267px;
     }
 }
 
@@ -1063,11 +1114,17 @@ body {
 
 .product-title a {
     font-family: open-sans-bold, sans-serif;
-    font-size: 20px;
+    font-size: 17px;
     line-height: 1.2;
     text-decoration: none;
     color: #0f0d0e;
     text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+    .product-title a {
+        font-size: 20px;
+    }
 }
 
 .product-description {
@@ -1134,16 +1191,16 @@ body {
 
 /*FOOTER*/
 .footer {
-    width: 1200px;
-    padding: 65px 15px 45px;
+    max-width: 360px;
+    padding: 22px 15px 47px;
     margin: 0 auto;
+    width: 100%;
 }
 
 @media (min-width: 768px) {
     .footer {
         max-width: 768px;
         padding: 24px 35px 0;
-        width: 100%;
     }
 }
 
