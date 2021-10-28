@@ -750,8 +750,6 @@ body {
 .new-posts-content {
     margin-left: 18px;
     margin-top: 0;
-    display: flex;
-    flex-direction: column;
 }
 
 .new-post-date {
@@ -760,6 +758,7 @@ body {
     opacity: 0.54;
     line-height: 1;
     margin-bottom: 3px;
+    vertical-align: top;
 }
 
 .new-post-title a {
@@ -794,7 +793,7 @@ body {
 
 .search-field {
     box-sizing: border-box;
-    padding-left: 18px;
+    padding: 0 18px;
     width: 100%;
     height: 47px;
     font-size: 13px;
@@ -833,7 +832,7 @@ body {
 /*PAGE->ASIDE->SUBSCRIPTION*/
 .subscription-field {
     box-sizing: border-box;
-    padding-left: 18px;
+    padding: 0 18px;
     width: 100%;
     height: 48px;
     font-size: 13px;
@@ -896,16 +895,8 @@ body {
 
 .topics-list-item {
     margin-top: 14px;
-}
-
-.topics-list-item::after {
-    content:"";
-    display: block;
-    position: relative;
-    margin-top: 14px;
-    width: 100%;
-    height: 1px;
-    background: #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom: 14px;
 }
 
 .topics-list-link {
@@ -969,7 +960,6 @@ body {
 }
 /*SHOP*/
 .shop-section {
-    max-width: 360px;
     width: 100%;
     padding: 0 15px;
     margin: 0 auto;
@@ -977,7 +967,6 @@ body {
 
 @media (min-width: 768px) {
     .shop-section {
-        max-width: 768px;
         padding: 0 35px;
     }
 }
@@ -991,7 +980,7 @@ body {
 
 .shop-section-products {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
@@ -1000,6 +989,7 @@ body {
     max-width: 337px;
     width: 100%;
     margin-bottom: 22px;
+    text-align: center;
 }
 
 @media (min-width: 768px) {
@@ -1016,75 +1006,29 @@ body {
     }
 }
 
-.product:first-child .product-preview {
-    background-image: url("../images/shop-item-mobile1.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-
-.product:nth-child(2) .product-preview {
-    background-image: url("../images/shop-item-mobile2.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-
-.product:nth-child(3) .product-preview {
-    background-image: url("../images/shop-item-mobile3.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-
-@media (min-width: 768px) {
-    .product:first-child .product-preview {
-        background-image: url("../images/shop-item-tablet1.jpg");
-    }
-
-    .product:nth-child(2) .product-preview {
-        background-image: url("../images/shop-item-tablet2.jpg");
-    }
-
-    .product:nth-child(3) .product-preview {
-        background-image: url("../images/shop-item-tablet3.jpg");
-    }
-}
-
-@media (min-width: 1660px) {
-    .product:nth-child(1) .product-preview {
-        background-image: url("../images/shop-item-desk1.jpg");
-    }
-
-    .product:nth-child(2) .product-preview {
-        background-image: url("../images/shop-item-desk2.jpg");
-    }
-
-    .product:nth-child(3) .product-preview {
-        background-image: url("../images/shop-item-desk3.jpg");
-    }
-}
-
 .product-preview {
     text-align: center;
-    height: 292px;
     overflow: hidden;
     width: 100%;
     margin: 0 auto -35px;
+    max-width: 288px;
 }
 
 @media (min-width: 768px) {
     .product-preview {
-        height: 230px;
         overflow: hidden;
         width: 290px;
         margin: 0 auto -35px;
+        max-width: 292px;
     }
 }
 
 @media (min-width: 1660px) {
     .product-preview {
-        height: auto;
         overflow: auto;
         width: auto;
         margin: 0 auto -35px;
+        max-width: 300px;
     }
 }
 
@@ -1092,6 +1036,7 @@ body {
     border: 3px solid #b59f5b;
     padding: 44px 20px 25px;
     position: relative;
+    text-align: left;
 }
 
 @media (min-width: 768px) {
@@ -1235,7 +1180,8 @@ body {
 }
 
 .socials-link {
-    width: 48px;
+    width: 20px;
+    margin-right: 28px;
     height: 20px;
     background-repeat: no-repeat;
     background-size: 20px;

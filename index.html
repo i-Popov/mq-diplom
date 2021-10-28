@@ -268,7 +268,7 @@
                         <span class="visually-hidden">Поле ввода</span>
                         <input class="search-field" name="query" placeholder="Найти..." alt="Поле поиска" required>
                     </label>
-                    <button class="search-button" alt="Кнопка поиска">
+                    <button class="search-button">
                         <span class="visually-hidden">Кнопка поиска</span>
                     </button>
                 </form>
@@ -281,7 +281,7 @@
                         <span class="visually-hidden">Поле ввода почты</span>
                         <input class="subscription-field" placeholder="Ваш email-адрес" alt="Поле ввода почты" requared>
                     </label>
-                    <button class="subscription-button" alt="Кнопка подписаться">Подписаться
+                    <button class="subscription-button">Подписаться
                         <span class="visually-hidden">Кнопка подписаться на рассылку</span>
                     </button>
                 </form>
@@ -341,7 +341,11 @@
         <h2 class="shop-head">Наши изделия</h2>
         <div class="shop-section-products">
             <article class="product">
-                <div class="product-preview"></div>
+                <picture>
+                    <source srcset="./images/shop-item-desk1.jpg" media="(min-width: 1660px)">
+                    <source srcset="./images/shop-item-tablet1.jpg" media="(min-width: 768px)">
+                    <img class="product-preview" src="./images/shop-item-mobile1.jpg" alt="Подушки на диван">
+                </picture>
                 <div class="product-info">
                     <h2 class="product-title"><a href="#">Подушки на диван</a></h2>
                     <div class="product-description">
@@ -353,7 +357,7 @@
                             <span class="price-new">800 &#8381</span>
                         </div>
                         <form class="buy-form">
-                            <button class="buy-button" alt="Кнопка покупки">
+                            <button class="buy-button">
                                 В магазин
                             </button>
                         </form>
@@ -361,7 +365,11 @@
                 </div>
             </article>
             <article class="product">
-                <div class="product-preview"></div>
+                <picture>
+                    <source srcset="./images/shop-item-desk2.jpg" media="(min-width: 1660px)">
+                    <source srcset="./images/shop-item-tablet2.jpg" media="(min-width: 768px)">
+                    <img class="product-preview" src="./images/shop-item-mobile2.jpg" alt="Шестиугольная рамка">
+                </picture>
                 <div class="product-info">
                     <h2 class="product-title"><a href="#">Кукла «Зайчик»</a></h2>
                     <div class="product-description">
@@ -372,7 +380,7 @@
                             <span class="price-new">3500 &#8381</span>
                         </div>
                         <form class="buy-form">
-                            <button class="buy-button" alt="Кнопка покупки">
+                            <button class="buy-button">
                                 В магазин
                             </button>
                         </form>
@@ -380,7 +388,11 @@
                 </div>
             </article>
             <article class="product">
-                <div class="product-preview"></div>
+                <picture>
+                    <source srcset="./images/shop-item-desk3.jpg" media="(min-width: 1660px)">
+                    <source srcset="./images/shop-item-tablet3.jpg" media="(min-width: 768px)">
+                    <img class="product-preview" src="./images/shop-item-mobile3.jpg" alt="Шестиугольная рамка">
+                </picture>
                 <div class="product-info">
                     <h2 class="product-title"><a href="#">Шестиугольная рамка</a></h2>
                     <div class="product-description">
@@ -391,11 +403,11 @@
                             <span class="price-old">500 &#8381</span>
                             <span class="price-new">400 &#8381</span>
                         </div>
-                        <form class="buy-form">
-                            <button class="buy-button" alt="Кнопка покупки">
+                        <div class="buy-form">
+                            <button class="buy-button">
                                 В магазин
                             </button>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </article>
