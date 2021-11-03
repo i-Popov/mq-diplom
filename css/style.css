@@ -55,7 +55,6 @@ body {
     }
 }
 
-/*Для создания маски изображения используем псевдоэлемент*/
 .header::after {
     content: "";
     background-color: #000000;
@@ -68,7 +67,6 @@ body {
     z-index: -1;
 }
 
-/*выравниваем контент в шапке по центру и задаём ширину*/
 .header-container {
     width: 100%;
     padding: 0 15px;
@@ -78,7 +76,6 @@ body {
 
 @media (min-width: 768px) {
     .header-container {
-        max-width: 768px;
         padding: 0 35px;
     }
 }
@@ -436,7 +433,6 @@ body {
 
 @media (min-width: 768px) {
     .page{
-        max-width: 768px;
         padding: 0 35px;
         margin: 45px auto 0;
         flex-direction: row;
@@ -992,6 +988,8 @@ body {
     width: 100%;
     margin-bottom: 22px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 @media (min-width: 768px) {
@@ -1039,12 +1037,12 @@ body {
     padding: 44px 20px 25px;
     position: relative;
     text-align: left;
+    height: 100%;
 }
 
 @media (min-width: 768px) {
     .product-info {
         padding: 44px 20px 25px;
-        height: 267px;
     }
 }
 
@@ -1139,7 +1137,6 @@ body {
 
 @media (min-width: 768px) {
     .footer {
-        max-width: 768px;
         padding: 24px 35px 0;
     }
 }
